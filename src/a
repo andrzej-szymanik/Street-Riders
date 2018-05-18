@@ -1,0 +1,19 @@
+for(int j=0;j<difficulty*4;j++)
+			{
+						trap[j].move(0,1);
+						trap[j].check(difficulty);
+						if ((trap[j].getGlobalBounds().intersects(auto1.getGlobalBounds()))||(trap[j].getGlobalBounds().intersects(auto2.getGlobalBounds())))
+						{
+								isGameOver = true;
+
+						}
+			}
+			for(int i=0;i<difficulty; i++)
+			{
+						star[i].move(0,1);
+						if(star[i].getGlobalBounds().intersects(auto1.getGlobalBounds()))
+						{
+							score++;
+							star[i].randomize(difficulty);
+						}
+			} 
